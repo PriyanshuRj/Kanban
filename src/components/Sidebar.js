@@ -17,10 +17,10 @@ const sideNav = [{
   stateColor: "#76A5EA"
 },
 ];
-export default function Sidebar() {
+export default function Sidebar({sidebarState, setSidebarOpen}) {
   const [selectedProject, selectProject] = useState(-1);
   return (
-    <div className='sidebar flex flex-col w-60 border-r-2 h-screen absolute z-10 bg-white overflow-y-scroll'>
+    <div className={`sidebar flex flex-col w-60 border-r-2 h-screen absolute z-10 bg-white overflow-y-scroll ${!sidebarState && 'hidden'}`}>
       <div className='px-4 py-6 h-[4.4rem] flex flex-row items-center justify-between border-b-2'>
         <div className='text-md font-semibold flex flex-row items-center'>
           <Colorfilter
@@ -31,7 +31,7 @@ export default function Sidebar() {
           />
           Project M.
         </div>
-        <div className='flex flex-row'>
+        <div className='flex flex-row cursor-pointer' onClick={()=> setSidebarOpen(false)}>
 
           <ArrowLeft2 size="20" color="#787486" variant="Outline" className='-mr-3' />
           <ArrowLeft2 size="20" color="#787486" variant="Outline" />
