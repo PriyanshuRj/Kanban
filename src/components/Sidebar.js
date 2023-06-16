@@ -126,11 +126,11 @@ export default function Sidebar() {
           />
           <svg className='absolute ' width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_f_1_309)">
-              <circle cx="30" cy="30" r="15" fill="#FCD64A" fill-opacity="0.7" />
+              <circle cx="30" cy="30" r="15" fill="#FCD64A" fillOpacity="0.7" />
             </g>
             <defs>
-              <filter id="filter0_f_1_309" x="0" y="0"  filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <filter id="filter0_f_1_309" x="0" y="0"  filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                 <feGaussianBlur stdDeviation="17" result="effect1_foregroundBlur_1_309" />
               </filter>
