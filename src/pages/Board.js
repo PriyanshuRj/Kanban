@@ -38,7 +38,6 @@ export default function Board() {
                 </svg>
               </div>
               <div className='w-6 h-6 rounded-md bg-[#5030E5] bg-opacity-[0.2] flex justify-center items-center ml-[0.75rem]'>
-
                 <Link1
                   size="16"
                   color="#5030E5"
@@ -101,8 +100,6 @@ export default function Board() {
               </div>
             </div>
             <div className='flex flex-row items-center'>
-
-
               <div className='border-[#787486] border cursor-pointer rounded-md px-3 py-[0.45rem] text-[#787486] text-medium flex flex-row items-center text-[0.8rem]'>
                 <Profile2User
                   size="16"
@@ -110,16 +107,13 @@ export default function Board() {
                   className='drop-shadow-md sm:mr-2'
                 />
                 <span className='hidden sm:flex'>
-
                 Share
                 </span>
-
               </div>
               <div className='h-8 w-0 border mx-4'>
               </div>
               <div className='flex flex-row items-center'>
                 <div onClick={()=>setViewType("list")} className={`h-8 w-8 ${viewTyle==="list" && "bg-[#5030E5]" }  rounded-md flex justify-center items-center cursor-pointer`}>
-
                   <Pause
                     size="16"
                     color={`  ${viewTyle==="grid" ? "#787486" : 'white'} `}
@@ -128,7 +122,6 @@ export default function Board() {
                   />
                 </div>
                 <div onClick={()=>setViewType("grid")} className={`h-8 w-8 ${viewTyle==="grid" && "bg-[#5030E5]" } ml-2 rounded-md flex justify-center items-center cursor-pointer`}>
-
                   <Menu
                     size="16"
                     color={`  ${viewTyle==="grid" ? "white" : '#787486'} `}
@@ -141,7 +134,6 @@ export default function Board() {
           </div>
         </div>
         <div className=' overflow-x-scroll'>
-
         <Kanban />
         </div>
       </div>
