@@ -26,3 +26,13 @@ code {
 .sidebar::-webkit-scrollbar {
   width: 6px;
 }
+.mainbody::-webkit-scrollbar-track:hover {
+  background-color: #CBD5E0;
+}
+.mainbody::-webkit-scrollbar-thumb:hover {
+  background-color: #718096;
+  border-radius: 10px;
+}
+.mainbody::-webkit-scrollbar {
+  width: 6px;
+}

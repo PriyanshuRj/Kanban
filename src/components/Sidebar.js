@@ -1,24 +1,11 @@
 import React, { useState } from 'react'
-import { Colorfilter, ArrowLeft2, Category, Message, TaskSquare, Profile2User, Setting2, AddSquare, LampOn } from 'iconsax-react';
-const sideNav = [{
-  title: "Mobile App",
-  stateColor: "#7AC555"
-},
-{
-  title: "Website Redesign",
-  stateColor: "#FFA500"
-},
-{
-  title: "Design System",
-  stateColor: "#E4CCFD"
-},
-{
-  title: "Wireframes",
-  stateColor: "#76A5EA"
-},
-];
+import { Colorfilter, ArrowLeft2, Category, Message, TaskSquare, Profile2User, Setting2, AddSquare, LampOn,SearchNormal1 } from 'iconsax-react';
+import { sideNav } from '../helpers/sidebar';
+
 export default function Sidebar({sidebarState, setSidebarOpen}) {
+
   const [selectedProject, selectProject] = useState(-1);
+
   return (
     <div className={`sidebar flex flex-col w-60 border-r-2 h-screen absolute z-10 bg-white overflow-y-scroll ${!sidebarState && 'hidden'}`}>
       <div className='px-4 py-6 h-[4.4rem] flex flex-row items-center justify-between border-b-2'>
@@ -36,6 +23,12 @@ export default function Sidebar({sidebarState, setSidebarOpen}) {
           <ArrowLeft2 size="20" color="#787486" variant="Outline" className='-mr-3' />
           <ArrowLeft2 size="20" color="#787486" variant="Outline" />
         </div>
+      </div>
+      <div className="relative w-[26rem] flex md:hidden py-3 px-2 border-b-2">
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <SearchNormal1 size="22" color="#787486" />
+        </div>
+        <input type="text" id="simple-search" className="bg-[#F5F5F5] border-none text-gray-900 text-sm rounded-lg block w-full pl-10 px-2.5 h-[2.75rem] w-[26rem] focus:outline-none" placeholder="Search for anything..." required />
       </div>
       <div className='flex flex-col mx-2  border-b-2 py-4'>
         <div className='flex flex-row items-center my-1 px-2 py-2 text-[#787486] hover:bg-[#5030E5] hover:bg-opacity-[0.08] rounded-lg cursor-pointer font-medium'>
@@ -117,12 +110,10 @@ export default function Sidebar({sidebarState, setSidebarOpen}) {
       </div>
       <div className='flex flex-col items-center mb-8'>
         <span className='bg-[#F5F5F5]  h-[4.125rem] w-[4.125rem] flex items-center justify-center rounded-full relative'>
-
           <LampOn
             size="24"
             color="#FBCB18"
             variant="Bulk"
-
           />
           <svg className='absolute ' width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_f_1_309)">
