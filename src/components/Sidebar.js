@@ -4,7 +4,7 @@ import { sideNav } from '../helpers/sidebar';
 
 export default function Sidebar({sidebarState, setSidebarOpen}) {
 
-  const [selectedProject, selectProject] = useState(-1);
+  const [selectedProject, selectProject] = useState(0);
 
   return (
     <div className={`sidebar flex flex-col w-60 border-r-2 h-screen absolute z-10 bg-white overflow-y-scroll ${!sidebarState && 'hidden'}`}>
